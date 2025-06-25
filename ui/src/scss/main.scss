@@ -1,0 +1,10 @@
+@use './base/variables' as *;
+
+body {
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+  background-color: $light-gray;
+  color: $primary-color;
+}
+

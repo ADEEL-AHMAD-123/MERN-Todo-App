@@ -1,0 +1,84 @@
+@use '../base/_variables' as *;
+
+.todo-page {
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+  
+    h2 {
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+  
+    .todo-form {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+  
+      input {
+        flex: 1;
+        padding: 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: $radius;
+        font-size: 1rem;
+      }
+  
+      button {
+        padding: 0.8rem 1.5rem;
+        background-color: $accent-color;
+        color: white;
+        border: none;
+        border-radius: $radius;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: darken($accent-color, 10%);
+        }
+      }
+    }
+  
+    .todo-list {
+      list-style: none;
+      padding: 0;
+  
+      .todo-item {
+        background: white;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: $radius;
+        box-shadow: $shadow;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        .text {
+          flex: 1;
+          font-size: 1.1rem;
+          color: $text-dark;
+        }
+  
+        .actions {
+          display: flex;
+          gap: 0.5rem;
+  
+          button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+  
+            &.delete {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  
+    .empty-state {
+      text-align: center;
+      color: gray;
+      font-style: italic;
+    }
+  }
+  
